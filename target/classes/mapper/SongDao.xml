@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="me.lcz.littleSpider.dao.SongDao">
+    <insert id="saveSongInfo" parameterType="me.lcz.littleSpider.entity.Song">
+        INSERT INTO song(song_url,song_name,singer,album,comment_count)
+        VALUES (#{songUrl},#{songName},#{singer},#{album},#{commentCount})
+    </insert>
+
+</mapper>

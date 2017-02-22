@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - netease_music@localhost" uuid="c4df60d0-cdc6-435d-bf25-5d6c40b6bd24">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>netease_music.*</schema-pattern>
+      <default-schemas>netease_music.*</default-schemas>
+    </data-source>
+  </component>
+</project>

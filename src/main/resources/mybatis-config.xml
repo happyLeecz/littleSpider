@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="me.lcz.littleSpider.c3p0.C3P0DataSourceFactory" >
+                <property  name="driverClass" value="${jdbc.driver}"/>
+                <property name="jdbcUrl" value="${jdbc.url}"/>
+                <property name="user" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+                <property name="maxPoolSize" value="100"/>
+                <property name="minPoolSize" value="10"/>
+                <!-- 关闭连接后不自动commit -->
+                <property name="autoCommitOnClose" value="false"/>
+                <!-- 获取连接超时时间 -->
+                <property name="checkoutTimeout" value="1000"/>
+                <!-- 当获取连接失败重试次数 -->
+                <property name="acquireRetryAttempts" value="2"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+
+    <mappers>
+        <mapper resource="mapper/SongDao.xml"/>
+    </mappers>
+
+
+</configuration>
